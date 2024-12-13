@@ -64,6 +64,29 @@ user_name = st.text_input("What's your name?", "")
 
 st.markdown(
     """
+    <style>
+        :root {
+            --text-color: #000000; /* Default black text for light mode */
+            --bg-color: #f9f9f9; /* Light grey background for light mode */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #ffffff; /* White text for dark mode */
+                --bg-color: #333333; /* Dark grey background for dark mode */
+            }
+        }
+
+        .rules {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
     <div class="rules">
         <strong>Rules of Categories:</strong>
         <ul>
